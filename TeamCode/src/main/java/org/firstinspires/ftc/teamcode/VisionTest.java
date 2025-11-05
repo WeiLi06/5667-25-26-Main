@@ -54,7 +54,9 @@ public final class VisionTest extends LinearOpMode {
 
                 }
                 if(det.id==finID && det.metadata!=null){
-                    telemetry.addData("Range", det.ftcPose.range*0.118279569892);
+                    telemetry.addData("Range", det.ftcPose.range*1.12);
+                    telemetry.addData("Bearing", det.ftcPose.bearing);
+                    telemetry.addData("Bearing Correction", 0-det.ftcPose.bearing);
                 }
 
             }
